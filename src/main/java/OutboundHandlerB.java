@@ -8,4 +8,9 @@ public class OutboundHandlerB extends ChannelOutboundHandlerAdapter {
         System.out.println("output B");
         super.write(ctx, msg, promise);
     }
+
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        super.exceptionCaught(ctx, cause);
+    }
 }
